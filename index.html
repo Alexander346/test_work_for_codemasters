@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--lang=ru, контент на русском-->
 <html lang="en">
 
 <head>
@@ -9,11 +10,16 @@
   <link rel="stylesheet" href="./style/normalize.css">
   <link rel="stylesheet" href="./style/font.css">
   <link rel="stylesheet" href="./style/style.css">
+
+<!--  иконки можно и через стандартный линк подключить font awesome, я не знаю профита от скрипта (он есть?),
+более того, ты использовал всякие лого, которые тоже могут входить в существующие иконочные шрифты,
+а ещё вариант это прогнать такие лого через icomoon, это генератор иконочных шрифтов-->
   <script src="https://kit.fontawesome.com/b173222310.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header class="header">
+<!--    можно чуть меньше вложенности, но и так сойдёт-->
     <div class="container">
       <nav class="header__nav">
         <ul class="header__nav-items">
@@ -176,6 +182,7 @@
     </div>
   </footer>
   <script>
+    // ну такое, лучше сделать чисто через css и сразу будет position:fixed, просто под ним у контента нужен padding-top отступ
     const header = document.querySelector(".header")
     window.onscroll = function (event) {
       if (window.scrollY > 106 )  {
